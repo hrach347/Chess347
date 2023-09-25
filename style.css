@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Explora&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 300ms;
+    font-family: 'Explora', cursive;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(#171717,#222222);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#mainGame{
+    display: none;
+}
+#startMenu{
+width: 100vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+font-size: 45px;
+text-align: center;
+}
+.pieces{
+    position: relative;
+    top: -30px;
+}
+.pieces img{
+   margin-top: 10px; 
+}
+.pieces>div{
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.pieces span{
+    width: 25px;
+    height: 25px;
+    border: solid 7px white;
+    margin-top: 20px;
+    border-right: none;
+    border-bottom: none;
+    position: relative;
+    cursor: pointer;
+}
+.pieces span:hover{
+    border-color: rgb(119, 255, 119);
+}
+#arrowLeft{
+    transform: rotateZ(-45deg);
+    left: -20px;
+}
+#arrowRight{
+    transform: rotateZ(135deg);
+    left: 20px;
+}
+.boardTheme{
+    margin-top: -10px;
+}
+.boardTheme>div{
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.boardTheme span{
+    width: 25px;
+    height: 25px;
+    border: solid 7px white;
+    border-right: none;
+    border-bottom: none;
+    position: relative;
+    cursor: pointer;
+}
+.boardTheme span:hover{
+    border-color: rgb(119, 255, 119);
+}
+#arrowLeft2{
+    transform: rotateZ(-45deg);
+    left: -20px;
+}
+#arrowRight2{
+    transform: rotateZ(135deg);
+    left: 20px;
+}
+.colors{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#startMenu>button{
+    width: 20%;
+    height: 55px;
+    display: block;
+    margin: auto;
+    background: rgb(68, 254, 68);
+    border: solid 3px white;
+    color: white;
+    font-family: sans-serif;
+    font-size: 35px;
+    box-shadow: inset 0px 0px 20px green,0px 0px 20px black;
+    border-radius: 10px; 
+    margin-top: 110px;
+    cursor: pointer;
+}
+#startMenu>button:hover{
+    background: rgb(131, 215, 35);
+}
+#startMenu>button:active{
+    background: white;
+    color: black;
+}
+.chessClock{
+    margin-top: 10px;
+}
+.chessClock>div{
+    width: 350px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.chessClock>div>div{
+    width: 100px;
+    height: 50px;
+    background: rgba(251, 251, 251, 0.075);
+    border: solid 3px transparent;
+    border-radius: 5px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.chessClock>div>div:hover{
+    box-shadow: inset 0px 0px 5px black;
+}
+
+.title {
+    font-size: 55px;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+#title{
+    font-size: 40px;
+    cursor: pointer;
+}
+#board {
+    width: 500px;
+    height: 500px;
+    border: solid 5px black;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cube {
+    width: 61.3px;
+    height: 61.3px;
+    /* border: solid 1px black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+/* .cube:hover{
+    box-shadow: inset 0px 0px 10px white, 0px 0px 5px black !important;
+    border-radius: 2px !important;
+} */
+.piece {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: 200ms;
+}
+.piece:hover{
+    transform: scale(1.15);
+}
+
+.choose {
+    width: 40%;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: calc(55% - 70px);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    background: rgb(20, 20, 20);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+.choose>img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: 200ms;
+}
+.choose>img:hover{
+    transform: rotateZ(5deg);
+}
+#cont{
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.player{
+    height: 50px;
+    /* border: solid 2px white; */
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px; 
+}
+.player div{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.time{
+    width: 130px;
+    height: 45px;
+    font-size: 30px;
+    background: rgba(252, 252, 252);
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+#time2{
+    opacity: 0.3;
+}
+@keyframes gago {
+    50% {
+        transform: rotateZ(-10deg);
+    }
+
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+@keyframes lose {
+    50% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

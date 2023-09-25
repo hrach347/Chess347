@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess347</title>
+    <script defer src="./app.js"></script>
+    <link rel="shortcut icon" href="space/wp.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="startMenu">
+        <h1 class="title">
+            Chess347
+        </h1>
+        <div class="pieces">
+            <h3>Pieces</h3>
+            <div>
+                <span id="arrowLeft"></span>
+                <img src="bases/wk.png" style="width: 50px;height: 50px;">
+                <img src="bases/wq.png" style="width: 50px;height: 50px;">
+                <img src="bases/wr.png" style="width: 50px;height: 50px;">
+                <img src="bases/wb.png" style="width: 50px;height: 50px;">
+                <img src="bases/wn.png" style="width: 50px;height: 50px;">
+                <img src="bases/wp.png" style="width: 50px;height: 50px;">
+                <span id="arrowRight"></span>
+            </div>
+        </div>
+        <div class="boardTheme">
+            <h3>Board Theme</h3>
+            <div>
+                <span id="arrowLeft2"></span>
+                <div class="colors">
+                    <div style="width: 60px;height: 60px;background: #964d22"></div>
+                    <div style="width: 60px;height: 60px;background: #fccc74"></div>
+                    <div style="width: 60px;height: 60px;background: #fccc74"></div>
+                    <div style="width: 60px;height: 60px;background: #964d22"></div>
+                </div>
+                <span id="arrowRight2"></span>
+            </div>
+        </div>
+        <div class="chessClock">
+            <h3>Clock</h3>      
+            <div>
+                <div id="m1" onclick="chooseClock(1,m1)">1 min</div>
+                <div id="m3" onclick="chooseClock(3,m3)">3 min</div>
+                <div id="m5" onclick="chooseClock(5,m5)">5 min</div>
+                <div id="m10" onclick="chooseClock(10,m10)" style="border-color: rgb(67, 255, 67)">10 min</div>
+                <div id="m15" onclick="chooseClock(15,m15)">15 min</div>
+                <div id="m30" onclick="chooseClock(30,m30)">30 min</div>
+                <div id="freeTime" onclick="chooseClock(null,freeTime)">Free</div>
+            </div>      
+        </div>
+        <button onclick="startGame()">
+            Play
+        </button>
+    </div>
+    <div id="mainGame">
+        <h1 class="title" id="title" onclick="reload()">
+            Chess347
+        </h1>
+        <div id="cont">
+            <div class="player" id="player2">
+                <div>
+                    <img src="space/bp.png" style="width: 40px;height: 40px">
+                    Black
+                </div>
+                <div id="time2" class="time">
+                    0:00
+                </div>
+            </div>
+            <div id="board">
+
+            </div>
+            <div class="player" id="player1">
+                <div>
+                    <img src="space/wp.png" style="width: 40px;height: 40px">
+                    White
+                </div>
+                <div id="time1" class="time">
+                    0:00
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
